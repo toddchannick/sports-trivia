@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+	<title>Philly Sports Trivia!</title>
+</head>
+
+<body>
+	<div class="header">
+		<div class="top-nav-wrapper">
+			<div id="top-nav">
+				<p id="home"><span class="emboss">Philly Sports Trivia</span></p>
+				<ul class="sports-icons">
+					<li><div id="football-icon"></div></li>
+					<li><div id="baseball-icon"></div></li>
+					<li><div id="hockey-icon"></div></li>
+					<li><div id="basketball-icon"></div></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-area">
+
+		<div class="main-content-wrap">
+			<div class="main-content-title-bar">
+				<div class="title-bar">
+					<p id="how-to"><span class="emboss">Welcome to Philadelphia Sports Trivia</span></p>
+				</div>
+			</div>
+			<div class="explanation">
+				<p>Are you a true Philly sports fan? Select a sport from the icons up top, and put your knowledge to the test! There will be 10 randomly selected questions for each category, and your score will be displayed on the right side. Good luck!</p>
+			</div>
+		</div>
+
+		<div class="football-wrap">
+			<div class="content-football">
+				<div class="main-content-title-bar">
+					<div class="title-bar">
+						<p id="football"><span class="emboss">Philadelphia Eagles</span></p>
+						<div id="eagles-logo"></div>
+					</div>
+				</div>
+				<div class="question-area">
+					<form class="radio">
+				     	<h1 class="question-number"></h1>
+				     	<br>
+				      	<br>
+				      	<p id="football-question" class="question"></p>
+				      	<br><br>
+				      	<label for="radio1">
+				        	<input type="radio" name="selection">
+				        	<span class="choice"></span>
+				      	</label>
+				      	<br><br>
+				      	<label for="radio2">
+				       		<input type="radio" name="selection">
+				       		<span class="choice"></span>
+				      	</label>
+					 	<br><br>
+					     <label for="radio3">
+					        <input type="radio" name="selection">
+					        <span class="choice"></span>
+					     </label>
+						<br><br>
+					    <label for="radio4">
+					    	<input type="radio" name="selection">
+					    	<span class="choice"></span>
+					    </label>
+						<br><br>
+					      <input type="submit" id="submit" class="grow">
+					</form>
+				</div>	
+				
+				<div class="feedback-wrap">
+					<div class="feedback-area">
+						<div class="correct">You got it!</div>
+						<div class="incorrect"></div>
+					</div>
+					<div class="next-question">
+						<div class ="next-button-fb grow"><p>Next Question</p></div>
+					</div>
+					<div class="final-score">
+					</div>
+				</div>
+
+			</div>
+			<div class="football-score">
+				<div class="score-title-bar">
+					<p><span class="emboss">Your Score:</span> <span class="score-display"></span></p>
+				</div>
+				<div class="score-section">
+					<ul class="user-answers">
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+			
+		
+		<div class = "baseball-wrap">
+			<div class="content-baseball">
+				<div class="main-content-title-bar">
+					<div class="title-bar">
+						<p id="baseball"><span class="emboss">Philadelphia Phillies</span></p>
+					</div>
+				</div>
+				<div class="question-area">
+					<form class="radio">
+				     	<h1 class="question-number"></h1>
+				     	<br>
+				      	<br>
+				      	<p id="baseball-question" class="question"></p>
+				      	<br><br>
+				      	<label for="radio5">
+				        	<input type="radio" name="selection">
+				        	<span class="choice"></span>
+				      	</label>
+				      	<br><br>
+				      	<label for="radio6">
+				       		<input type="radio" name="selection">
+				       		<span class="choice"></span>
+				      	</label>
+					 	<br><br>
+					     <label for="radio7">
+					        <input type="radio" name="selection">
+					        <span class="choice"></span>
+					     </label>
+						<br><br>
+					    <label for="radio8">
+					    	<input type="radio" name="selection">
+					    	<span class="choice"></span>
+					    </label>
+						<br><br>
+					      <input type="submit" id="submit" class="grow">
+					</form>
+				</div>
+
+				<div class="feedback-wrap">
+					<div class="feedback-area">
+						<div class="correct">You got it!</div>
+						<div class="incorrect"></div>
+					</div>
+					<div class="next-question">
+						<div class ="next-button-baseball grow"><p>Next Question</p></div>
+					</div>
+					<div class="final-score">
+					</div>
+				</div>
+			</div>
+
+			<div class="baseball-score">
+				<div class="score-title-bar">
+					<p><span class="emboss">Your Score:</span> <span class="score-display"></span></p>
+				</div>
+				<div class="score-section">
+					<ul class="user-answers">
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="hockey-wrap">
+			<div class="content-hockey">
+				<div class="main-content-title-bar">
+					<div class="title-bar">
+						<p id="hockey"><span class="emboss">Philadelphia Flyers</span></p>
+					</div>
+				</div>
+				<div class="question-area">
+					<form class="radio">
+				     	<h1 class="question-number"></h1>
+				     	<br>
+				      	<br>
+				      	<p id="hockey-question" class="question"></p>
+				      	<br><br>
+				      	<label for="radio9">
+				        	<input type="radio" name="selection">
+				        	<span class="choice"></span>
+				      	</label>
+				      	<br><br>
+				      	<label for="radio10">
+				       		<input type="radio" name="selection">
+				       		<span class="choice"></span>
+				      	</label>
+					 	<br><br>
+					     <label for="radio11">
+					        <input type="radio" name="selection">
+					        <span class="choice"></span>
+					     </label>
+						<br><br>
+					    <label for="radio12">
+					    	<input type="radio" name="selection">
+					    	<span class="choice"></span>
+					    </label>
+						<br><br>
+					      <input type="submit" id="submit" class="grow">
+					</form>
+				</div>
+				<div class="feedback-wrap">
+					<div class="feedback-area">
+						<div class="correct">You got it!</div>
+						<div class="incorrect"></div>
+					</div>
+					<div class="next-question">
+						<div class ="next-button-hockey grow"><p>Next Question</p></div>
+					</div>
+					<div class="final-score">
+					</div>
+				</div>
+			</div>
+
+			<div class="hockey-score">
+				<div class="score-title-bar">
+					<p><span class="emboss">Your Score:</span> <span class="score-display"></span></p>
+				</div>
+				<div class="score-section">
+					<ul class="user-answers">
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="basketball-wrap">
+			<div class="content-basketball">
+				<div class="main-content-title-bar">
+					<div class="title-bar">
+						<p id="basketball"><span class="emboss">Philadelphia 76ers</span></p>
+					</div>
+				</div>
+				<div class="question-area">
+					<form class="radio">
+				     	<h1 class="question-number"></h1>
+				     	<br>
+				      	<br>
+				      	<p id="basketball-question" class="question"></p>
+				      	<br><br>
+				      	<label for="radio13">
+				        	<input type="radio" name="selection">
+				        	<span class="choice"></span>
+				      	</label>
+				      	<br><br>
+				      	<label for="radio14">
+				       		<input type="radio" name="selection">
+				       		<span class="choice"></span>
+				      	</label>
+					 	<br><br>
+					     <label for="radio15">
+					        <input type="radio" name="selection">
+					        <span class="choice"></span>
+					     </label>
+						<br><br>
+					    <label for="radio16">
+					    	<input type="radio" name="selection">
+					    	<span class="choice"></span>
+					    </label>
+						<br><br>
+					      <input type="submit" id="submit" class="grow">
+					</form>
+				</div>
+				<div class="feedback-wrap">
+					<div class="feedback-area">
+						<div class="correct">You got it!</div>
+						<div class="incorrect"></div>
+					</div>
+					<div class="next-question">
+						<div class ="next-button-basketball grow"><p>Next Question</p></div>
+					</div>
+					<div class="final-score">
+					</div>
+				</div>
+			</div>
+
+			<div class="basketball-score">
+				<div class="score-title-bar">
+					<p><span class="emboss">Your Score:</span> <span class="score-display"></span></p>
+				</div>
+				<div class="score-section">
+					<ul class="user-answers">
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class="footer-wrap">
+		<div class="footer-content">
+			<p>Created by Todd Channick, 2014</p>
+		</div>
+	</div>
+	
+</body>
+
+</html>

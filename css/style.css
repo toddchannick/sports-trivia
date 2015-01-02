@@ -1,0 +1,830 @@
+/*--------style reset -------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ul {
+	display:block;
+	list-style: none;
+}
+
+/*------------ My Stylesheet -------------------*/
+*{
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+@font-face{
+  font-family: title;
+  src: url('../fonts/Philal.ttf');
+}
+
+html {
+	display:block;
+	-webkit-font-smoothing: antialiased;
+	height:100%;
+}
+
+
+body {
+	background-image:url('../images/trivia-bg.png');
+	background-size:cover;
+	background-repeat:no-repeat;
+	height:100%;
+	width:100%;
+	font-family:sans-serif;
+	min-width:1000px;
+}
+
+.header {
+	position:absolute;
+	height:8em;
+	line-height:8em;
+	width:100%;
+	min-width:925px;
+	background-color:#664C3B;
+	border-bottom:.25em solid #7F6350;
+}
+
+.top-nav-wrapper {
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+}
+
+#top-nav {
+	font-family:title;
+	font-size:3.5em;
+	color:white;
+}
+
+#top-nav p {
+	float:left;
+	padding-right:1em;
+}
+
+#home {
+	cursor:pointer;
+}
+
+.emboss {
+	text-shadow:#fff 0px 1px 0, #000 0 -1px 0;
+}
+
+ul {
+	display:block;
+	list-style: none;
+	right:0;
+	margin-top:.1em;
+	min-width:323px;
+	position:absolute;
+}
+
+.sports-icons li {
+	display:inline-block;
+	margin-right:.5em;
+}
+
+/*------TOP ICONS-------*/
+
+#football-icon {
+	-moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+	background-image:url('../images/football-icon.png');
+	height:40px;
+	width:40px;
+	cursor:pointer;
+}
+
+#football-icon:hover {
+	background-image:url('../images/football-icon2.png');
+	height:40px;
+	width:40px;
+	cursor:pointer;
+}
+
+#baseball-icon {
+	-moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+	background-image:url('../images/baseball-icon.png');
+	height:40px;
+	width:40px;
+	cursor:pointer;
+}
+
+#baseball-icon:hover {
+	background-image:url('../images/baseball-icon2.png');
+	height:40px;
+	width:40px;
+	cursor:pointer;
+}
+
+#hockey-icon {
+	-moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+	background-image:url('../images/hockey-icon.png');
+	height:40px;
+	width:40px;
+	cursor:pointer;
+}
+
+#hockey-icon:hover {
+	background-image:url('../images/hockey-icon2.png');
+	height:40px;
+	width:40px;
+	cursor:pointer;
+}
+
+#basketball-icon {
+	-moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+	background-image:url('../images/basketball-icon.png');
+	height:40px;
+	width:40px;
+	cursor:pointer;
+}
+
+#basketball-icon:hover {
+	background-image:url('../images/basketball-icon2.png');
+	height:40px;
+	width:40px;
+	cursor:pointer;
+}
+
+/*-------MAIN PAGE CONTENT-------*/
+
+.main-content-wrap {
+	background-color:#333240;
+	display:none;
+	position:relative;
+	top:10em;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	border:.25em solid #7F6350;
+}
+
+.main-content-title-bar {
+	position:relative;
+	background-color:#664C3B;
+	height:4em;
+	line-height:4em;
+	width:100%;
+}
+
+.content-area {
+	width:100%;
+	min-height:41em;
+}
+
+.question {
+	font-size:.9em;
+	line-height:110%;
+}
+
+.choice {
+	text-indent:1em;
+	font-size:.9em;
+}
+
+.title-bar {
+	font-family:title;
+	color:white;
+	font-size:2em;
+	text-indent:1em;
+}
+
+.title-bar p{
+	position:relative;
+	float:left;
+}
+
+#eagles-logo {
+	background-image:url('../images/eagle-logo.png');
+	background-size:contain;
+	background-repeat:none;
+	position:relative;
+	float:right;
+	right:1em;
+	top:.25em;
+	width:90px;
+	height:48px;
+}
+
+.question-area {
+	position:relative;
+	width:100%;
+	height:19em;
+}
+
+.question-area form {
+	margin-top:.5em;
+}
+
+
+/*-----FOOTBALL SECTION-----*/
+
+.football-wrap {
+	background-color:#333240;
+	display:none;
+	position:relative;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	top:10em;
+}
+
+.content-football {
+	background-color:#333240;
+	position:relative;
+	width:60%;
+	float:left;
+	border:.25em solid #7F6350;
+}
+
+.score-title-bar {
+	background-color:#664C3B;
+	height:2em;
+	line-height:2em;
+	width:100%;
+	font-family:title;
+	font-size:2em;
+	color:white;
+	text-indent:1em;
+}
+
+.football-score {
+	background-color:#333240;
+	color:white;
+	position:relative;
+	float:right;
+	width:30%;
+	height:28em;
+	border:.25em solid #7F6350;
+}
+
+
+.feedback-wrap {
+	color:white;
+	position:relative;
+	bottom:0;
+	height:4em;
+	line-height:4em;
+	width:100%;
+}
+
+.feedback-area {
+	position:relative;
+	width:70%;
+	text-indent:1em;
+	float:left;
+}
+
+.correct {
+	display:none;
+	position:relative;
+	float:left;
+	font-size:.85em;
+	color:white;
+	background-color:#517F4A;
+	left:1em;
+	top:1.5em;
+	width:8em;
+	height:2em;
+	line-height:2em;
+}
+
+
+.incorrect {
+	display:none;
+	position:relative;
+	float:left;
+	font-size:.85em;
+	color:white;
+	background-color:#7F2F2F;
+	left:1em;
+	top:1.5em;
+	width:auto;
+	padding-right:1em;
+	height:2em;
+	line-height:2em;
+}
+
+.next-question {
+	display:none;
+	position:relative;
+	width:30%;
+	height:4em;
+	float:right;
+}
+
+/*-----------NEXT BUTTONS----------*/
+
+.next-button-fb {
+	cursor:pointer;
+	position:relative;
+	float:right;
+	right:1em;
+	top:1.5em;
+	font-size:.85em;
+	display:none;
+	height:2em;
+	line-height:2em;
+	width:8em;
+	background-color:#517F4A;
+}
+
+.next-button-baseball {
+	cursor:pointer;
+	position:relative;
+	float:right;
+	right:1em;
+	top:1.5em;
+	font-size:.85em;
+	display:none;
+	height:2em;
+	line-height:2em;
+	width:8em;
+	background-color:#517F4A;
+}
+
+.next-button-basketball {
+	cursor:pointer;
+	position:relative;
+	float:right;
+	right:1em;
+	top:1.5em;
+	font-size:.85em;
+	display:none;
+	height:2em;
+	line-height:2em;
+	width:8em;
+	background-color:#517F4A;
+}
+
+.next-button-hockey {
+	cursor:pointer;
+	position:relative;
+	float:right;
+	right:1em;
+	top:1.5em;
+	font-size:.85em;
+	display:none;
+	height:2em;
+	line-height:2em;
+	width:8em;
+	background-color:#517F4A;
+}
+
+/*------------------------------------------------*/
+
+.final-score {
+	display:none;
+	position:relative;
+	font-size:1em;
+	color:white;
+	text-align:center;
+	background-color:#517F4A;
+	width:96%;
+	margin-left:auto;
+	margin-right:auto;
+	height:3em;
+	line-height:3em;
+}
+
+#fb-again {
+	cursor:pointer;
+	margin-left:3em;
+	font-size:.8em;
+}
+
+#fb-again:hover {
+	cursor:pointer;
+	margin-left:3em;
+	font-size:.8em;
+}
+
+.final {
+	font-weight:1000;
+}
+
+
+
+input[type=submit] {
+	margin-top:.5em;
+	background-color:#E5E5E5;
+	padding:.3em; 
+	border:0;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	width:6em;
+}
+
+input[type=submit]:focus {
+	outline:0;
+}
+
+
+/*--input[type=submit]:hover {
+	background-color:#A6A6A6;
+	padding:.5em; 
+	border:0;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	width:6em;
+}
+
+/*--------------------------------------*/
+
+/*
+.submit-style {
+	cursor: pointer;
+	background: #e1e1e1;
+	text-decoration: none;
+	color: #666666;
+	display: inline-block;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.submit-style:hover {
+	-webkit-animation-name: pulse;
+	animation-name: pulse;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+*/
+
+.grow {
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: -webkit-transform;
+	transition-property: transform;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+}
+
+.grow:hover {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.next-button-fb p {
+	text-align:center;
+}
+
+
+/*-----BASEBALL SECTION-----*/
+
+.baseball-wrap {
+	display:none;
+	position:relative;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	top:10em;
+}
+
+.content-baseball {
+	background-color:#333240;
+	position:relative;
+	width:60%;
+	float:left;
+	border:.25em solid #7F6350;
+}
+
+.baseball-score {
+	background-color:#333240;
+	position:relative;
+	float:right;
+	width:30%;
+	height:28em;
+	border:.25em solid #7F6350;
+}
+
+/*-----HOCKEY SECTION-----*/
+
+.hockey-wrap {
+	display:none;
+	position:relative;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	top:10em;
+}
+
+.content-hockey {
+	background-color:#333240;
+	position:relative;
+	width:60%;
+	float:left;
+	border:.25em solid #7F6350;
+}
+
+.hockey-score {
+	background-color:#333240;
+	position:relative;
+	float:right;
+	width:30%;
+	height:28em;
+	border:.25em solid #7F6350;
+}
+
+/*-----BASKETBALL SECTION-----*/
+
+.basketball-wrap {
+	display:none;
+	position:relative;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	top:10em;
+}
+
+.content-basketball {
+	background-color:#333240;
+	position:relative;
+	width:60%;
+	float:left;
+	border:.25em solid #7F6350;
+
+}
+
+.basketball-score {
+	background-color:#333240;
+	position:relative;
+	float:right;
+	width:30%;
+	height:28em;
+	border:.25em solid #7F6350;
+}
+
+
+.question-area {
+	color:white;
+	position:relative;
+	width:92%;
+	margin-left:auto;
+	margin-right:auto;
+	top:1em;
+}
+
+.question-number {
+	font-weight:800;
+	font-size:1.1em;
+}
+
+.explanation {
+	height:12em;
+	color:white;
+	position:relative;
+	width:92%;
+	margin-left:auto;
+	margin-right:auto;
+	top:1em;
+	line-height:200%;
+}
+
+.user-answers {
+	position:relative;
+	margin-top:2.1em;
+	text-indent:1.8em;
+	font-family:sans-serif;
+	font-size:1em;
+}
+
+.user-answers li {
+	margin:0 0 1em 0;
+}
+
+.score-section {
+	position:relative;
+	font-size:.9em;
+}
+
+.score-correct {
+	margin-left:1.3em;
+	font-weight:600;
+	color:#517F4A;
+}
+
+.score-incorrect {
+	margin-left:1.3em;
+	font-weight:600;
+	color:#CC2F2F;
+}
+
+
+.footer-wrap {
+	position:fixed;
+	bottom:0;
+	width:100%;
+	min-width:925px;
+	background-color:#664C3B;
+	border-top:.25em solid #7F6350;
+	height:2em;
+	line-height:2em;
+}
+
+.footer-content {
+	color:white;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.footer-content p{
+	font-size:.8em;
+	text-align:center;
+}
+
+/*
+hr {
+	background-color:#7F6350;
+	border:0 none;
+	height:.2em;
+}
+*/
+
+/*-----------Buzz-out Hover Effect-----------*/
+
+@-webkit-keyframes buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+@keyframes buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+.buzz-out {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.buzz-out:hover, .buzz-out:focus, .buzz-out:active {
+  -webkit-animation-name: buzz-out;
+  animation-name: buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
