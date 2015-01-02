@@ -296,6 +296,7 @@ $('input[type="submit"]').click(function() {
                   finalScore.empty();
                   finalScore.hide();
                   answerList.empty();
+                  scoreDisplay.text('');
                   shuffle(footballQuestions);
                   showFootballQuestion();
                 });
@@ -311,6 +312,7 @@ $('input[type="submit"]').click(function() {
                   finalScore.empty();
                   finalScore.hide();
                   answerList.empty();
+                  scoreDisplay.text('');
                   shuffle(footballQuestions);
                   showFootballQuestion();
                 });
