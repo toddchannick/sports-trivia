@@ -285,7 +285,7 @@ $('input[type="submit"]').click(function() {
         if(currentFootballQuestion.answer == response) {
                 nextSection.hide();
                 correctFeedback.text('You got it!').fadeIn(1000);
-                correctFeedback.delay(300).fadeOut(500);
+                correctFeedback.delay(300).fadeOut(300);
                 currentScore++;
                 scoreDisplay.text(currentScore);
                 answerList.append("<li>Question " + questionNum + ":    <span class='score-correct'>Correct</span></li>");
@@ -303,7 +303,7 @@ $('input[type="submit"]').click(function() {
         }
         else {
               incorrectFeedback.text( 'Nope! The correct answer was '+currentFootballQuestion.answer).fadeIn(1000);
-              incorrectFeedback.delay(300).fadeOut(500);
+              incorrectFeedback.delay(300).fadeOut(300);
               answerList.append("<li>Question " + questionNum + ":    <span class='score-incorrect'>Incorrect</span></li>");
               displayFinalScore();
 
