@@ -9,15 +9,24 @@ var baseball = $('.baseball-wrap');
 var hockey = $('.hockey-wrap');
 var basketball = $('.basketball-wrap');
 
+//Icon selector variables
+var footballIcon = $('#football-icon');
+var philadelphiaEagles = $('#philadelphia-eagles');
+var baseballIcon = $('#baseball-icon');
+var hockeyIcon = $('#hockey-icon');
+var basketballIcon = $('#basketball-icon');
+
+//Form section
 var quizForm = $('quiz');
 var submitButton = $('#submit');
 
+//Answer section on right
 var answerList = $('.user-answers');
 var currentScore = 0;
 
 var scoreDisplay = $('.score-display');
-var questionNum = 1;
 
+//Feedback area on bottom
 var feedbackArea = $('.feedback-area');
 var correctFeedback = $('.correct');
 var incorrectFeedback = $('.incorrect');
@@ -28,11 +37,12 @@ var nextSection = $('.next-question');
 var nextButtonFB = $('.next-button-fb');
 var nextButtonBaseball = $('.next-button-baseball');
 
+//Other variables
 var questionNumberHeading = $('.question-number');
-var questionNum;
+var questionNum = 1;
 
 
-/*--declaration of functions--*/
+//Declaration of functions
 var hideAll = function(){
 	scoreDisplay.text('');
   main.hide();
@@ -41,6 +51,7 @@ var hideAll = function(){
 	hockey.hide();
 	basketball.hide();
 	nextButtonFB.hide();
+  nextButtonBaseball.hide();
 }
 
 var resetScore = function(){
@@ -189,13 +200,17 @@ var currentbaseballQuestion = null;
 var baseballQuestionIndex = 0;
 
 
+
+
 //-------------------------MANIPULATING FORM ELEMENTS--------------------------//
 
+
+//Dynamically adding text to the form
 function setRadioLabel(radioId, text) {
      $('label[for="' + radioId + '"]').find('.choice').text(text);
 };
 
-//-------DISABLE and ENABLE RADIO BUTTONS/FORM---------//
+//Disabling and enabling forms
 var disableRadio = function(){
   $("input[type=radio]").attr('disabled', true);
   submitButton.attr('disabled','disabled');
@@ -213,7 +228,7 @@ function shuffle(o){
     return o;
 };
 
-/*-----FOOTBALL SHUFFLE----*/
+//Shuffle football questions
 var shuffleFootball = function(){
   if (footballQuestionIndex<=footballQuestions.length){
     shuffle(footballQuestions);
@@ -224,7 +239,7 @@ var shuffleFootball = function(){
   }
 };
 
-/*-----BASEBALL SHUFFLE----*/
+//Shuffle baseball questions
 var shuffleBaseball = function(){
   if (baseballQuestionIndex<=baseballQuestions.length){
     shuffle(baseballQuestions);
@@ -235,10 +250,11 @@ var shuffleBaseball = function(){
   }
 };
 
+
 //----------------------SHOW RANDOM QUESTION (for each sport)----------------------//
 
 
-/*--------------FOOTBALL---------------*/
+//Show random football question
 var showFootballQuestion = function(){
   enableRadio();
 
@@ -259,7 +275,7 @@ var showFootballQuestion = function(){
     currentFootballQuestion = random;
 };
 
-/*--------------BASEBALL----------------*/
+//Show random baseball question
 var showBaseballQuestion = function(){
   enableRadio();
 
@@ -283,7 +299,7 @@ var showBaseballQuestion = function(){
 //-------action on clicking NEXT button---------//
 
 
-/*----FOOTBALL------*/
+//clicking next button in football section
 var nextFBQuestion = function(){
   if (questionNum<10){
     questionNum++;
@@ -299,7 +315,7 @@ nextButtonFB.on('click', function(){
     nextFBQuestion();
  });
 
-/*----BASEBALL------*/
+//clicking next button in baseball section
 var nextBaseballQuestion = function(){
   if (questionNum<10){
     questionNum++;
@@ -336,6 +352,25 @@ var displayFinalScoreBaseball = function(){
   }
 };
 
+/*-----FUNCTIONS FOR DISPLAYING FEEDBACK------*/
+
+var displayCorrectFeedback = function(){
+  correctFeedback.text('You got it!').fadeIn(1000);
+  currentScore++;
+  scoreDisplay.text(currentScore);
+  answerList.append("<li>Question " + questionNum + ":       <span class='score-correct'>Correct</span></li>");
+  nextSection.delay(800).fadeIn(500);     
+}
+
+var displayIncorrectFeedback = function(i){    
+  incorrectFeedback.text( 'Nope! The correct answer was '+i).fadeIn(1000);
+  answerList.append("<li>Question " + questionNum + ":       <span class='score-incorrect'>Incorrect</span></li>");
+  nextSection.delay(800).fadeIn(500);  
+}
+
+/*---------------------------------------*/
+
+
 
 
 //-----check user answer on submit----//
@@ -348,21 +383,16 @@ $('#fb-submit').click(function() {
     if(questionNum<10){
 
           if(currentFootballQuestion.answer == response) {
-              correctFeedback.text('You got it!').fadeIn(1000);
-              currentScore++;
-              scoreDisplay.text(currentScore);
-              answerList.append("<li>Question " + questionNum + ":       <span class='score-correct'>Correct</span></li>");
-            	nextSection.delay(800).fadeIn(500); 
-              nextButtonFB.fadeIn(500);   	
+              displayCorrectFeedback();
+              nextButtonFB.fadeIn(500); 
     			}
 
           else {
-              incorrectFeedback.text( 'Nope! The correct answer was '+currentFootballQuestion.answer).fadeIn(1000);
-              answerList.append("<li>Question " + questionNum + ":       <span class='score-incorrect'>Incorrect</span></li>");
-              nextSection.delay(800).fadeIn(500);
-              nextButtonFB.fadeIn(500);
+              displayIncorrectFeedback(currentFootballQuestion.answer);
+              nextButtonFB.fadeIn(500); 
           }
         }
+
     }
     if(questionNum==10) {
         if(currentFootballQuestion.answer == response) {
@@ -417,20 +447,13 @@ $('#baseball-submit').click(function() {
     if(questionNum<10){
 
           if(currentBaseballQuestion.answer == response) {
-              console.log('correct');
-              correctFeedback.text('You got it!').fadeIn(1000);
-              currentScore++;
-              scoreDisplay.text(currentScore);
-              answerList.append("<li>Question " + questionNum + ":       <span class='score-correct'>Correct</span></li>");
-              nextSection.delay(800).fadeIn(500); 
-              nextButtonBaseball.fadeIn(500);     
+              displayCorrectFeedback();    
+              nextButtonBaseball.fadeIn(500); 
           }
 
           else {
-              incorrectFeedback.text( 'Nope! The correct answer was '+currentBaseballQuestion.answer).fadeIn(1000);
-              answerList.append("<li>Question " + questionNum + ":       <span class='score-incorrect'>Incorrect</span></li>");
-              nextSection.delay(800).fadeIn(500);
-              nextButtonBaseball.fadeIn(500);
+              displayIncorrectFeedback(currentBaseballQuestion.answer);
+              nextButtonBaseball.fadeIn(500); 
           }
         }
     }
@@ -479,8 +502,10 @@ $('#baseball-submit').click(function() {
 
 
 
-//------------------ACTIONS WHEN CLICKING ON EACH ELEMENT-------------------//
+//--------------ACTIONS WHEN HOVERING/CLICKING ON EACH ELEMENT-------------//
 //-------------------------------------------------------------------------//
+
+
 
 	$('#home').on('click',function(){
 		resetScore();
@@ -488,7 +513,7 @@ $('#baseball-submit').click(function() {
 		main.fadeIn(1000);
 	});
 
-  $('#football-icon').on('click',function(){
+  (footballIcon).on('click',function(){
   	hideAll();
   	currentFootballQuestion=0;
   	resetScore();
@@ -497,8 +522,21 @@ $('#baseball-submit').click(function() {
     showFootballQuestion();
     });
 
+  (footballIcon).on('mouseenter',function(){
+    baseballIcon.animate({opacity:0}, 400);
+    hockeyIcon.animate({opacity:0}, 400);
+    basketballIcon.animate({opacity:0}, 400);
+    philadelphiaEagles.animate({opacity:1}, 400)
+  });
 
-  $('#baseball-icon').on('click',function(){
+  (footballIcon).on('mouseleave',function(){
+    baseballIcon.animate({opacity:1}, 400);
+    hockeyIcon.animate({opacity:1}, 400);
+    basketballIcon.animate({opacity:1}, 400);
+  });
+
+
+  (baseballIcon).on('click',function(){
   	hideAll();
     currentBaseballQuestion=0;
   	resetScore();

@@ -74,7 +74,7 @@ body {
 	background-repeat:no-repeat;
 	height:100%;
 	width:100%;
-	font-family:sans-serif;
+	font-family:'Lato', sans-serif;
 	min-width:1000px;
 }
 
@@ -131,15 +131,18 @@ ul {
 /*------TOP ICONS-------*/
 
 #football-icon {
-	-moz-transition: all .3s ease-in;
+	/*-moz-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
     -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in;
+    transition: all .3s ease-in;*/
+    position:relative;
+    z-index:1;
 	background-image:url('../images/football-icon.png');
 	height:40px;
 	width:40px;
 	cursor:pointer;
 }
+
 
 #football-icon:hover {
 	background-image:url('../images/football-icon2.png');
@@ -149,10 +152,12 @@ ul {
 }
 
 #baseball-icon {
-	-moz-transition: all .3s ease-in;
+	/* -moz-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
     -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in;
+    transition: all .3s ease-in; */
+    position:relative;
+    z-index:1;
 	background-image:url('../images/baseball-icon.png');
 	height:40px;
 	width:40px;
@@ -167,10 +172,12 @@ ul {
 }
 
 #hockey-icon {
-	-moz-transition: all .3s ease-in;
+	/* -moz-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
     -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in;
+    transition: all .3s ease-in; */
+    position:relative;
+    z-index:1;
 	background-image:url('../images/hockey-icon.png');
 	height:40px;
 	width:40px;
@@ -185,10 +192,12 @@ ul {
 }
 
 #basketball-icon {
-	-moz-transition: all .3s ease-in;
+	/* -moz-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
     -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in;
+    transition: all .3s ease-in; */
+    position:relative;
+    z-index:1;
 	background-image:url('../images/basketball-icon.png');
 	height:40px;
 	width:40px;
@@ -205,7 +214,7 @@ ul {
 /*-------MAIN PAGE CONTENT-------*/
 
 .main-content-wrap {
-	background-color:#333240;
+	background:rgba(58,58,58,.6);
 	display:none;
 	position:relative;
 	top:10em;
@@ -230,7 +239,7 @@ ul {
 
 .question {
 	font-size:.9em;
-	line-height:110%;
+	line-height:150%;
 }
 
 .choice {
@@ -250,6 +259,8 @@ ul {
 	float:left;
 }
 
+/*-----LOGOS OF TEAMS------*/
+
 #eagles-logo {
 	background-image:url('../images/eagle-logo.png');
 	background-size:contain;
@@ -261,6 +272,21 @@ ul {
 	width:90px;
 	height:48px;
 }
+
+#phillies-logo {
+	background-image:url('../images/phillies-logo.png');
+	background-size: contain;
+	background-repeat:none;
+	position:relative;
+	float:right;
+	right:1em;
+	top:.25em;
+	width:50px;
+	height:48px;
+}
+
+
+/*---------------------*/
 
 .question-area {
 	position:relative;
@@ -276,7 +302,7 @@ ul {
 /*-----FOOTBALL SECTION-----*/
 
 .football-wrap {
-	background-color:#333240;
+	background:rgba(58,58,58,.6);
 	display:none;
 	position:relative;
 	width:80%;
@@ -286,7 +312,7 @@ ul {
 }
 
 .content-football {
-	background-color:#333240;
+	background:rgba(58,58,58,.6);
 	position:relative;
 	width:60%;
 	float:left;
@@ -305,7 +331,7 @@ ul {
 }
 
 .football-score {
-	background-color:#333240;
+	background:rgba(58,58,58,.6);
 	color:white;
 	position:relative;
 	float:right;
@@ -496,7 +522,7 @@ input[type=submit]:focus {
 	display: inline-block;
 	-webkit-transform: translateZ(0);
 	transform: translateZ(0);
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	box-shadow: 0 0 1px rgbaa(0, 0, 0, 0);
 }
 
 .submit-style:hover {
@@ -516,11 +542,11 @@ input[type=submit]:focus {
 	transition-duration: 0.3s;
 	-webkit-transition-property: -webkit-transform;
 	transition-property: transform;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: rgbaa(0, 0, 0, 0);
 	-webkit-transform: translateZ(0);
 	-ms-transform: translateZ(0);
 	transform: translateZ(0);
-	box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+	box-shadow: 0 0 0px rgbaa(0, 0, 0, 0);
 }
 
 .grow:hover {
@@ -530,6 +556,18 @@ input[type=submit]:focus {
 }
 
 .next-button-fb p {
+	text-align:center;
+}
+
+.next-button-baseball p {
+	text-align:center;
+}
+
+.next-button-hockey p {
+	text-align:center;
+}
+
+.next-button-basketball p {
 	text-align:center;
 }
 
@@ -546,7 +584,7 @@ input[type=submit]:focus {
 }
 
 .content-baseball {
-	background-color:#333240;
+	background:rgbaa(58,58,58,.6);
 	position:relative;
 	width:60%;
 	float:left;
@@ -554,7 +592,7 @@ input[type=submit]:focus {
 }
 
 .baseball-score {
-	background-color:#333240;
+	background:rgba(58,58,58,.6);
 	position:relative;
 	float:right;
 	width:30%;
@@ -574,7 +612,7 @@ input[type=submit]:focus {
 }
 
 .content-hockey {
-	background-color:#333240;
+	background:rgba(58,58,58,.6);
 	position:relative;
 	width:60%;
 	float:left;
@@ -582,7 +620,7 @@ input[type=submit]:focus {
 }
 
 .hockey-score {
-	background-color:#333240;
+	background:rgba(58,58,58,.6);
 	position:relative;
 	float:right;
 	width:30%;
@@ -602,7 +640,7 @@ input[type=submit]:focus {
 }
 
 .content-basketball {
-	background-color:#333240;
+	background:rgba(58,58,58,.6);
 	position:relative;
 	width:60%;
 	float:left;
@@ -611,7 +649,7 @@ input[type=submit]:focus {
 }
 
 .basketball-score {
-	background-color:#333240;
+	background:rgba(58,58,58,.6);
 	position:relative;
 	float:right;
 	width:30%;
@@ -654,6 +692,7 @@ input[type=submit]:focus {
 }
 
 .user-answers li {
+	color:white;
 	margin:0 0 1em 0;
 }
 
@@ -816,7 +855,7 @@ hr {
   display: inline-block;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgbaa(0, 0, 0, 0);
 }
 .buzz-out:hover, .buzz-out:focus, .buzz-out:active {
   -webkit-animation-name: buzz-out;
