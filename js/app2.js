@@ -513,6 +513,8 @@ $('#baseball-submit').click(function() {
 		main.fadeIn(1000);
 	});
 
+  //football icon
+
   (footballIcon).on('click',function(){
   	hideAll();
   	currentFootballQuestion=0;
@@ -523,18 +525,18 @@ $('#baseball-submit').click(function() {
     });
 
   (footballIcon).on('mouseenter',function(){
-    baseballIcon.animate({opacity:0}, 400);
-    hockeyIcon.animate({opacity:0}, 400);
-    basketballIcon.animate({opacity:0}, 400);
-    philadelphiaEagles.animate({opacity:1}, 400)
+    baseballIcon.animate({opacity:0}, 200);
+    hockeyIcon.animate({opacity:0}, 200);
+    basketballIcon.animate({opacity:0}, 200);
   });
 
   (footballIcon).on('mouseleave',function(){
-    baseballIcon.animate({opacity:1}, 400);
-    hockeyIcon.animate({opacity:1}, 400);
-    basketballIcon.animate({opacity:1}, 400);
+    baseballIcon.animate({opacity:1}, 200);
+    hockeyIcon.animate({opacity:1}, 200);
+    basketballIcon.animate({opacity:1}, 200);
   });
 
+  //baseball icon
 
   (baseballIcon).on('click',function(){
   	hideAll();
@@ -543,6 +545,18 @@ $('#baseball-submit').click(function() {
   	baseball.fadeIn(1000);
     shuffleBaseball();
     showBaseballQuestion();
+  });
+
+  (baseballIcon).on('mouseenter',function(){
+    footballIcon.animate({opacity:0}, 200);
+    hockeyIcon.animate({opacity:0}, 200);
+    basketballIcon.animate({opacity:0}, 200);
+  });
+
+  (baseballIcon).on('mouseleave',function(){
+    footballIcon.animate({opacity:1}, 200);
+    hockeyIcon.animate({opacity:1}, 200);
+    basketballIcon.animate({opacity:1}, 200);
   });
 
 /*---------------------
