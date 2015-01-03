@@ -163,6 +163,11 @@ var footballQuestions = [
       'answer': 'LeSean McCoy',
       'question': 'Which Eagle holds the record for the most rushing yards (1607) in a single season?',
       options: ['Wilbert Montgomery', 'LeSean McCoy', 'Ricky Waters','Brian Westbrook']
+  },
+  { 
+      'answer': '24-21 Patriots',
+      'question': 'What was the final score of the 2004 Super Bowl vs. the the Patriots?',
+      options: ['35-27 Patriots', '21-10 Patriots', '35-28 Eagles','24-21 Patriots']
   }
 ];
 
@@ -531,9 +536,9 @@ $('#baseball-submit').click(function() {
   });
 
   (footballIcon).on('mouseleave',function(){
-    baseballIcon.animate({opacity:1}, 200);
-    hockeyIcon.animate({opacity:1}, 200);
-    basketballIcon.animate({opacity:1}, 200);
+    baseballIcon.animate({opacity:1}, 100);
+    hockeyIcon.animate({opacity:1}, 100);
+    basketballIcon.animate({opacity:1}, 100);
   });
 
   //baseball icon
@@ -554,9 +559,9 @@ $('#baseball-submit').click(function() {
   });
 
   (baseballIcon).on('mouseleave',function(){
-    footballIcon.animate({opacity:1}, 200);
-    hockeyIcon.animate({opacity:1}, 200);
-    basketballIcon.animate({opacity:1}, 200);
+    footballIcon.animate({opacity:1}, 100);
+    hockeyIcon.animate({opacity:1}, 100);
+    basketballIcon.animate({opacity:1}, 100);
   });
 
 /*---------------------
