@@ -214,7 +214,7 @@ ul {
 /*-------MAIN PAGE CONTENT-------*/
 
 .main-content-wrap {
-	background:rgba(58,58,58,.6);
+	background:rgba(0,0,0,.2);
 	display:none;
 	position:relative;
 	top:10em;
@@ -302,7 +302,7 @@ ul {
 /*-----FOOTBALL SECTION-----*/
 
 .football-wrap {
-	background:rgba(58,58,58,.6);
+	background:rgba(0,0,0,.2);
 	display:none;
 	position:relative;
 	width:80%;
@@ -312,7 +312,7 @@ ul {
 }
 
 .content-football {
-	background:rgba(58,58,58,.6);
+	background:rgba(0,0,0,.2);
 	position:relative;
 	width:60%;
 	float:left;
@@ -331,7 +331,7 @@ ul {
 }
 
 .football-score {
-	background:rgba(58,58,58,.6);
+	background:rgba(0,0,0,.2);
 	color:white;
 	position:relative;
 	float:right;
@@ -584,7 +584,7 @@ input[type=submit]:focus {
 }
 
 .content-baseball {
-	background:rgbaa(58,58,58,.6);
+	background:rgbaa(0,0,0,.2);
 	position:relative;
 	width:60%;
 	float:left;
@@ -592,7 +592,7 @@ input[type=submit]:focus {
 }
 
 .baseball-score {
-	background:rgba(58,58,58,.6);
+	background:rgba(0,0,0,.2);
 	position:relative;
 	float:right;
 	width:30%;
@@ -612,7 +612,7 @@ input[type=submit]:focus {
 }
 
 .content-hockey {
-	background:rgba(58,58,58,.6);
+	background:rgba(0,0,0,.2);
 	position:relative;
 	width:60%;
 	float:left;
@@ -620,7 +620,7 @@ input[type=submit]:focus {
 }
 
 .hockey-score {
-	background:rgba(58,58,58,.6);
+	background:rgba(0,0,0,.2);
 	position:relative;
 	float:right;
 	width:30%;
@@ -640,7 +640,7 @@ input[type=submit]:focus {
 }
 
 .content-basketball {
-	background:rgba(58,58,58,.6);
+	background:rgba(0,0,0,.2);
 	position:relative;
 	width:60%;
 	float:left;
@@ -649,7 +649,7 @@ input[type=submit]:focus {
 }
 
 .basketball-score {
-	background:rgba(58,58,58,.6);
+	background:rgba(0,0,0,.2);
 	position:relative;
 	float:right;
 	width:30%;
@@ -721,8 +721,8 @@ input[type=submit]:focus {
 	min-width:925px;
 	background-color:#664C3B;
 	border-top:.25em solid #7F6350;
-	height:2em;
-	line-height:2em;
+	height:2.5em;
+	line-height:2.5em;
 }
 
 .footer-content {
