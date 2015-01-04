@@ -11,14 +11,13 @@ var basketball = $('.basketball-wrap');
 
 //Icon selector variables
 var footballIcon = $('#football-icon');
-var philadelphiaEagles = $('#philadelphia-eagles');
 var baseballIcon = $('#baseball-icon');
 var hockeyIcon = $('#hockey-icon');
 var basketballIcon = $('#basketball-icon');
 
 //Form section
 var quizForm = $('quiz');
-var submitButton = $('#submit');
+var footballSubmitButton = $('#fb-submit');
 
 //Answer section on right
 var answerList = $('.user-answers');
@@ -218,12 +217,12 @@ function setRadioLabel(radioId, text) {
 //Disabling and enabling forms
 var disableRadio = function(){
   $("input[type=radio]").attr('disabled', true);
-  submitButton.attr('disabled','disabled');
+  footballSubmitButton.attr('disabled','disabled');
 };
 
 var enableRadio = function(){
   $("input[type=radio]").attr('disabled', false);
-  submitButton.removeAttr('disabled');
+  footballSubmitButton.removeAttr('disabled');
 };
 
 
@@ -525,6 +524,7 @@ $('#baseball-submit').click(function() {
   	currentFootballQuestion=0;
   	resetScore();
     football.fadeIn(1000);
+    footballIcon.toggleClass('fb-active');
     shuffleFootball();
     showFootballQuestion();
     });
