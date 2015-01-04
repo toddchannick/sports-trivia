@@ -684,6 +684,11 @@ input[type=submit]:focus {
 	line-height:200%;
 }
 
+.notice {
+	color:#CC2F2F;
+	font-weight:600;
+}
+
 .user-answers {
 	position:relative;
 	margin-top:2.1em;
