@@ -125,7 +125,7 @@ var footballQuestions = [
   },
   { 
       'answer': 'Jeff Garcia',
-      'question': 'When Donovan McNabb went down after 10 games in the 2006 season, who replaced him taking the snaps for the team?',
+      'question': 'When Donovan McNabb went down after 10 games in the 2006 season, who replaced him as the starting QB?',
       options: ['Koy Detmer', 'Andy Hall', 'Mike McMahon','Jeff Garcia']
   },
   { 
