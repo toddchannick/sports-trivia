@@ -339,12 +339,14 @@ nextButtonBaseball.on('click', function(){
 //--FINAL SCORE DISPLAY--//
 
 var displayFinalScoreFB = function(){
-  if (currentScore>6){
+  if (currentScore>6 && currentScore<10){
     finalScore.delay(1800).append('<p>Your final score was '+currentScore+' out of 10. Excellent! <span id="fb-again" class="buzz-out">Play again?</span></p>').fadeIn(1000);
   }
   if (currentScore<=6){
     finalScore.delay(1800).append('<p>Your final score was '+currentScore+' out of 10. Better luck next time! <span id="fb-again" class="buzz-out">Play again?</span></p>').fadeIn(1000);
   }
+  if (currentScore==10)
+    finalScore.delay(1800).append('<p>Perfect score, you are the Rainman of Eagles trivia! <span id="fb-again" class="buzz-out">Play again?</span></p>').fadeIn(1000);
 };
 
 var displayFinalScoreBaseball = function(){
