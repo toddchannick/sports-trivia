@@ -41,6 +41,7 @@ var questionNumberHeading = $('.question-number');
 var questionNum = 1;
 
 
+
 //Declaration of functions
 var hideAll = function(){
 	scoreDisplay.text('');
@@ -53,6 +54,8 @@ var hideAll = function(){
   nextButtonBaseball.hide();
 }
 
+
+
 var resetScore = function(){
 	currentScore = 0;
 	questionNum = 1;
@@ -62,6 +65,8 @@ var resetScore = function(){
   finalScore.hide();
   finalScore.empty();
 }
+
+
 
 
 //---------------------------FOOTBALL QUESTIONS-------------------------------//
@@ -346,6 +351,7 @@ var displayFinalScoreFB = function(){
     finalScore.delay(1800).append('<p>Your final score was '+currentScore+' out of 10. Better luck next time! <span id="fb-again" class="buzz-out">Play again?</span></p>').fadeIn(1000);
   }
   if (currentScore==10)
+    eaglesSong[0].play();
     finalScore.delay(1800).append('<p>Perfect score, you are the Rainman of Eagles trivia! <span id="fb-again" class="buzz-out">Play again?</span></p>').fadeIn(1000);
 };
 
@@ -543,6 +549,8 @@ $('#baseball-submit').click(function() {
     basketballIcon.animate({opacity:1}, 100);
   });
 
+  /*---------------------
+
   //baseball icon
 
   (baseballIcon).on('click',function(){
@@ -566,7 +574,7 @@ $('#baseball-submit').click(function() {
     basketballIcon.animate({opacity:1}, 100);
   });
 
-/*---------------------
+
 
     $('#hockey-icon').on('click',function(){
     	main.hide();
