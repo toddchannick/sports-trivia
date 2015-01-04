@@ -441,7 +441,7 @@ $('#fb-submit').click(function() {
 });
 
 
-/*-----Baseball Submit------*/
+/*-----Baseball Submit-----*/
 $('#baseball-submit').click(function() {
 
   disableRadio();
